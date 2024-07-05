@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Airlines, Planes, and Routes: Database and REST API creation</title>
+</head>
+<body>
+    <h1>Airlines, Planes, and Routes: Database and REST API creation</h1>
+    <h2>REST Endpoints and Useful Links</h2>
+    <table>
+        <tr><th>Admin Page</th><th></th></tr>
+        <tr><td>Link: </td><td><a href="/admin"> /admin</a></td></tr>
+        <tr><td>Username: </td><td>admin</td></tr>
+        <tr><td>Password: </td><td>admin</td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+    <table>
+        <tr><th>Endpoint 1: </th><th></th></tr>
+        <tr><td>Name: </td><td>Airlines List</td></tr>
+        <tr><td>Route: </td><td>/api/airlines_list</td></tr>
+        <tr><td>Methods: </td><td>GET</td></tr>
+        <tr><td>Details: </td><td>This endpoint proves the user with a list of all airlines in the database, providing the primary key, and name of the airline.</td></tr>
+        <tr><td>Example Link: </td><td><a href="/api/airlines_list"> /api/airlines_list</a></td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+    <table>
+        <tr><th>Endpoint 2: </th><th></th></tr>
+        <tr><td>Name: </td><td>Airline Detail</td></tr>
+        <tr><td>Route: </td><td>/api/airline_info/[AIRLINE PRIMARY KEY]</td></tr>
+        <tr><td>Methods: </td><td>GET, DELETE</td></tr>
+        <tr><td>Details: </td><td>Using the primary key of the airline, this page displays all the information fields available in the model for that specific airline. The ability to delete the airline entry is also available.</td></tr>
+        <tr><td>Example Link: </td><td><a href="/api/airline_info/2">/api/airline_info/2</a></td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+    <table>
+        <tr><th>Endpoint 3: </th><th></th></tr>
+        <tr><td>Name: </td><td>Airports List</td></tr>
+        <tr><td>Route: </td><td>/api/airport_list</td></tr>
+        <tr><td>Methods: </td><td>GET</td></tr>
+        <tr><td>Details: </td><td>This endpoint proves the user with a list of all airports in the database, providing the primary key, and name and location of the airport.</td></tr>
+        <tr><td>Example Link: </td><td><a href="/api/airport_list">/api/airport_list</a></td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+    <table>
+        <tr><th>Endpoint 4: </th><th></th></tr>
+        <tr><td>Name: </td><td>Airport Detail</td></tr>
+        <tr><td>Route: </td><td>/api/airport_info/[AIRPORT PRIMARY KEY]</td></tr>
+        <tr><td>Methods: </td><td>GET, DELETE</td></tr>
+        <tr><td>Details: </td><td>Using the primary key of the airport, this page displays all the information fields available in the model for that airport. The ability to delete the airport is also available.</td></tr>
+        <tr><td>Example Link: </td><td><a href="/api/airport_info/3">/api/airline_info/3</a></td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+    <table>
+        <tr><th>Endpoint 5: </th><th></th></tr>
+        <tr><td>Name: </td><td>Equipment List</td></tr>
+        <tr><td>Route: </td><td>/api/equipment_list</td></tr>
+        <tr><td>Methods: </td><td>GET</td></tr>
+        <tr><td>Details: </td><td>This endpoint proves the user with a list of all airplanes in the database, providing the primary key, and name of the plane.</td></tr>
+        <tr><td>Example Link: </td><td><a href="/api/equipment_list">/api/equipment_list</a></td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+    <table>
+        <tr><th>Endpoint 6: </th><th></th></tr>
+        <tr><td>Name: </td><td>Equipment Detail</td></tr>
+        <tr><td>Route: </td><td>/api/equipment_info/[AIRPLANE PRIMARY KEY]</td></tr>
+        <tr><td>Methods: </td><td>GET, POST, PUT, DELETE</td></tr>
+        <tr><td>Details: </td><td>Using the primary key of the airplane, this page displays all the information fields available in the model for that model of airplane. The ability to edit, delete, and add new entries is also available.</td></tr>
+        <tr><td>Example Link: </td><td><a href="/api/equipment_info/4">/api/equipment_info/4</a></td></tr>
+        <tr><td> </td></tr>
+    </table>
+
+</body>
+</html>
